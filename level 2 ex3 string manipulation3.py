@@ -2,24 +2,23 @@
 #Ask the questions 5 times (one for each weekday).
 #Print if the user gave the same input for breakfast and dinner.
 
-food_list=[]
-uniqueList=[]
-duplicateList=[]
 
-#store the breakfast and dinner for food list
+breakfast_list=[]
+dinner_list=[]
+same_food=[]
+
+#store the breakfast and dinner for breakfast list and dinner list
 for index in range(0,5):
     breakfast=input("what he likes for breakfast: ")
-    food_list.append(breakfast)
+    breakfast_list.append(breakfast)
     dinner=input("what he likes for dinner: ")
-    food_list.append(dinner) 
+    dinner_list.append(dinner) 
 
-print(food_list)
+print(breakfast_list)
+print(dinner_list)
 
-#find the same input for breakfasr and dinner
-for index in food_list:
-    if index not in uniqueList:
-        uniqueList.append(index)
-    elif index not in duplicateList:
-        duplicateList.append(index)
-
-print("breakfast and dinner is: ",duplicateList)
+#find the same input for breakfasr and dinner print the same food 
+for food in breakfast_list:
+    if food in dinner_list:
+        same_food.append(food)
+print(same_food)
