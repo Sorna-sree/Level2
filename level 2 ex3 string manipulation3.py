@@ -6,10 +6,10 @@
 breakfast_list=[]
 dinner_list=[]
 same_food=[]
-
+dates=["monday","Tuesday","Wednesday","Thursday","friday","saturday","sunday"]
 #store the breakfast and dinner for breakfast list and dinner list
 for index in range(0,5):
-    breakfast=input("what he likes for breakfast: ")
+    breakfast=input(f"what he likes for breakfast{dates[index]}: ")
     breakfast_list.append(breakfast)
     dinner=input("what he likes for dinner: ")
     dinner_list.append(dinner) 
