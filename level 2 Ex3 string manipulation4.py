@@ -5,9 +5,18 @@
 
 dinnerlist=[]
 
+ 
+ 
 for index in range(0,5):
     dinner=input(f"enter the dinner for day{index+1} : ")
     if(dinner in dinnerlist ):
         print(f' you  already had {dinner} for dinner. you had {dinnerlist} so far .Enter diffirent dinner for  day{index+1} ')
+        continue
     dinnerlist.append(dinner)
-print(f"you had {dinnerlist}  for dinner last week")    
+
+if(len(dinnerlist)<5):
+ print("please enter different food for one more time ")
+
+
+if(len(dinnerlist)==5):
+ print(f"you had a {dinnerlist[0]},{dinnerlist[1]},{dinnerlist[2]},{dinnerlist[3]},and {dinnerlist[4]} for dinner last week ")
